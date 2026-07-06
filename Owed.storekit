@@ -1,0 +1,29 @@
+{
+  "identifier" : "owed",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "owed_pro_unlock",
+      "localizations" : [
+        {
+          "description" : "Unlocks unlimited lending records and full repayment history",
+          "displayName" : "Owed Pro",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "owed_pro_unlock",
+      "referenceName" : "Owed Pro Unlock",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_askToBuyEnabled" : false
+  },
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
