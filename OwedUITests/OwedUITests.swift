@@ -32,7 +32,8 @@ final class OwedUITests: XCTestCase {
 
     func testHomeShowsHandshakeMeterOnLaunch() throws {
         let app = launchApp()
-        XCTAssertTrue(app.otherElements["handshakeGauge"].waitForExistence(timeout: 12), "Handshake gauge did not appear on launch")
+        let gauge = app.descendants(matching: .any).matching(identifier: "handshakeGauge").firstMatch
+        XCTAssertTrue(gauge.waitForExistence(timeout: 12), "Handshake gauge did not appear on launch")
     }
 
     func testSeedLoansAppear() throws {
