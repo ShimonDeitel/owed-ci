@@ -133,9 +133,11 @@ final class OwedUITests: XCTestCase {
         nameField.typeText("Test")
         XCTAssertTrue(app.keyboards.element.exists)
 
-        // Tap on the form's section header (within the Form's own hit
-        // region, matching where dismissKeyboardOnTap is actually attached).
-        app.staticTexts["New Loan"].firstMatch.tap()
+        // Tap on the form's section header, now given a name distinct from
+        // the nav title ("Loan Details" vs "New Loan") so this query is
+        // unambiguous — the earlier version reused the nav title text and
+        // could resolve to that non-Form element via firstMatch instead.
+        app.staticTexts["Loan Details"].tap()
         XCTAssertFalse(app.keyboards.element.exists, "Keyboard did not dismiss on tap-outside")
     }
 }

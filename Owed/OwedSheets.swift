@@ -26,7 +26,7 @@ struct AddLoanFormView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("New Loan") {
+                Section("Loan Details") {
                     TextField("Friend's name", text: $friendName)
                         .accessibilityIdentifier("friendNameField")
                     TextField("Amount", text: $amountText)
